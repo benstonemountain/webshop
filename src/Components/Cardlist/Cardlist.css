@@ -1,0 +1,12 @@
+.cards {
+    width: 70%;
+    margin-top: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.card-title {
+    margin-top: 90px;
+}

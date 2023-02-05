@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Cardlist from './Components/Cardlist/Cardlist';
+import Cart from './Components/Cart/Cart';
+import Header from './Components/Header/Header';
 
 function App() {
+
+const [order, setOrder] = useState([]);
+console.log(order);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Cardlist setOrder = {setOrder} order = {order}/>
+      <Cart order = {order}/>
     </div>
   );
 }
