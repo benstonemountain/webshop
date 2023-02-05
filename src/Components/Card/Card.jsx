@@ -1,16 +1,12 @@
 import "./Card.css";
 
 const Card = ({ discgolf, setOrder, order }) => {
-  // const temp = order;
-
 
   const addOrder = () => {
-    order.push({ title: discgolf.title, price: discgolf.price });
-    setOrder(order);
-    console.log("lefut");
-    console.log(order);
-
+    const newOrder = [...order, { title: discgolf.title, price: discgolf.price }];
+    setOrder(newOrder);
   };
+
 
   return (
     <div className="card-container">

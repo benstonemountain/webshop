@@ -8,8 +8,8 @@ const Cardlist = ({ setOrder, order }) => {
     <>
       <h1 className="card-title">CARDS</h1>
       <div className="cards">
-        {cardData.map((item) => {
-          return <Card discgolf={item} setOrder={setOrder} order={order} />;
+        {cardData.map((item, index) => {
+          return <Card key={index} discgolf={item} setOrder={setOrder} order={order} />;
         })}
       </div>
     </>

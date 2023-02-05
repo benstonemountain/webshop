@@ -1,7 +1,7 @@
 import "./Cart.css";
 
 const Cart = ({ order }) => {
- 
+ console.log(order);
 
   return (
     <div className="cart">
